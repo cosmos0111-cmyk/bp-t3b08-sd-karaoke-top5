@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신도림 가라오케 TOP5 – 찐 정보 모음.zip</title>
+    <meta name="description" content="신도림 가라오케 TOP5에 대한 모든 정보. 위치, 가격대, 시스템, 꿀팁까지. 형들이 직접 발로 뛰고 정리한 찐 데이터.">
+    <meta name="keywords" content="신도림 가라오케, 신도림 노래방 정보, 신도림 가라오케 가격, 신도림 가라오케 위치, 신도림 가라오케 시스템, 신도림 코인노래방, 신도림 노래방 추천">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://t3b08-sd-karaoke-top5.vercel.app/">
+    <meta property="og:title" content="신도림 가라오케 TOP5 – 찐 정보 모음.zip">
+    <meta property="og:description" content="신도림 가라오케 TOP5 정보 총정리. 위치, 가격, 시스템까지 한 방에 확인하셈.">
+
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        img, svg {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: #ff2a6d;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: #ff6b9d;
+            text-shadow: 0 0 8px rgba(255,42,109,0.5);
+        }
+        ul, ol {
+            list-style: none;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* LAYOUT ASYMMETRIC FULL BLEED */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+        section, header, footer {
+            width: 100%;
+        }
+
+        /* STREET BRUTALIST ELEMENTS */
+        .brutal-card {
+            background: #14141f;
+            border: 2px solid #2a2a3a;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .brutal-card:hover {
+            border-color: #ff2a6d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,42,109,0.15);
+        }
+        .brutal-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 60px;
+            height: 60px;
+            border-top: 4px solid #ff2a6d;
+            border-left: 4px solid #ff2a6d;
+            pointer-events: none;
+        }
+        .brutal-btn {
+            display: inline-block;
+            background: #ff2a6d;
+            color: #0a0a0f;
+            padding: 0.8rem 2rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .brutal-btn:hover {
+            background: #ff6b9d;
+            color: #0a0a0f;
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(255,42,109,0.4);
+        }
+        .neon-text {
+            color: #ff2a6d;
+            text-shadow: 0 0 10px rgba(255,42,109,0.5), 0 0 20px rgba(255,42,109,0.3);
+        }
+        .glitch-bg {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+            position: relative;
+        }
+        .glitch-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,42,109,0.03) 2px, rgba(255,42,109,0.03) 4px);
+            pointer-events: none;
+        }
+
+        /* NAV PRESENT */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10,10,15,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #2a2a3a;
+            padding: 0.8rem 0;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #ff2a6d;
+            letter-spacing: 0.05em;
+        }
+        nav .logo span {
+            color: #e0e0e0;
+        }
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        nav ul li a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            border-color: #ff2a6d;
+            background: rgba(255,42,109,0.1);
+        }
+        nav .tel-link {
+            background: #ff2a6d;
+            color: #0a0a0f !important;
+            padding: 0.5rem 1.2rem !important;
+            font-weight: 800;
+            border: none !important;
+        }
+        nav .tel-link:hover {
+            background: #ff6b9d;
+            color: #0a0a0f !important;
+        }
+
+        /* HAMBURGER */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            background: none;
+            border: none;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* RESPONSIVE 768 */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            nav ul {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background: rgba(10,10,15,0.98);
+                backdrop-filter: blur(10px);
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 2px solid #ff2a6d;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li a {
+                font-size: 1rem;
+                padding: 0.6rem 1rem;
+                width: 100%;
+                text-align: center;
+            }
+            nav .tel-link {
+                width: 100%;
+                text-align: center;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+            .brutal-card {
+                padding: 1.2rem;
+            }
+        }
+
+        /* HEADER */
+        header {
+            padding-top: 80px;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #a0a0b0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* SECTION */
+        section {
+            padding: 3rem 0;
+        }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        section h2::before {
+            content: '◆';
+            color: #ff2a6d;
+            font-size: 1.5rem;
+        }
+
+        /* INFO GRID */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .info-item {
+            background: #14141f;
+            border: 1px solid #2a2a3a;
+            padding: 1.5rem;
+            border-left: 4px solid #ff2a6d;
+        }
+        .info-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #ff2a6d;
+        }
+        .info-item ul li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #1e1e2e;
+            font-size: 0.95rem;
+        }
+        .info-item ul li:last-child {
+            border-bottom: none;
+        }
+        .info-item ul li strong {
+            color: #ff6b9d;
+        }
+
+        /* TABLE STYLE */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+        .info-table th {
+            background: #1a1a2e;
+            color: #ff2a6d;
+            padding: 0.8rem 1rem;
+            text-align: left;
+            font-weight: 700;
+            border: 1px solid #2a2a3a;
+        }
+        .info-table td {
+            padding: 0.8rem 1rem;
+            border: 1px solid #2a2a3a;
+            background: #14141f;
+        }
+        .info-table tr:hover td {
+            background: #1a1a2e;
+        }
+
+        /* FAQ */
+        .faq-list {
+            margin-top: 1.5rem;
+        }
+        .faq-item {
+            background: #14141f;
+            border: 1px solid #2a2a3a;
+            margin-bottom: 1rem;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: #ff2a6d;
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item h3::after {
+            content: '+';
+            color: #ff2a6d;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        .faq-item.active h3::after {
+            content: '−';
+        }
+        .faq-item p {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #a0a0b0;
+            display: none;
+        }
+        .faq-item.active p {
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a0f;
+            border-top: 2px solid #2a2a3a;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #606070;
+        }
+        footer a {
+            color: #ff2a6d;
+        }
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">SIN<span>DORIM</span></div>
+            <button class="hamburger-menu" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="/top5">TOP5</a></li>
+                <li><a href="/info">정보</a></li>
+                <li><a href="/review">리뷰</a></li>
+                <li><a href="tel:010-1234-5678" class="tel-link">전화 문의</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>신도림 가라오케 <span class="neon-text">정보</span></h1>
+            <p>형들이 직접 발로 뛰고 조사한 신도림 가라오케 찐 데이터. 위치, 가격, 시스템, 꿀팁까지 한 방에 정리했다. 이거 보면 너도 신도림 고수 된다.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>지역 개요 & 접근성</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>📍 위치 & 교통</h3>
+                    <ul>
+                        <li><strong>신도림역</strong> 1호선 / 2호선 환승역</li>
+                        <li>도보 5~10분 거리 밀집</li>
+                        <li>주차 가능 업소 대부분 (협소)</li>
+                        <li>택시 승차장 도보 3분</li>
+                    </ul>
+                </div>
+                <div class="info-item">
+                    <h3>⏰ 운영 시간</h3>
+                    <ul>
+                        <li><strong>코인노래방</strong> 24시간</li>
+                        <li><strong>룸가라오케</strong> 12:00 ~ 새벽 4~5시</li>
+                        <li><strong>주말</strong> 연장 운영 (업소마다 상이)</li>
+                        <li>예약 필수 (인기 시간대)</li>
+                    </ul>
+                </div>
+                <div class="info-item">
+                    <h3>💵 가격대</h3>
+                    <ul>
+                        <li><strong>코인노래방</strong> 1곡 500~1,000원</li>
+                        <li><strong>룸가라오케</strong> 1시간 2~5만원</li>
+                        <li><strong>음료/안주</strong> 별도 (1~3만원)</li>
+                        <li>단체 할인 or 패키지 O</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>TOP5 업소 상세 정보</h2>
+            <p style="margin-bottom: 1.5rem;">형들이 직접 가보고 체크한 핵심 정보만 뽑았다. 가격, 시스템, 분위기까지 표로 정리했으니 비교해보셈.</p>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>업소명</th>
+                        <th>위치</th>
+                        <th>가격 (1시간)</th>
+                        <th>시스템</th>
+                        <th>특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>더블에이</strong></td>
+                        <td>신도림역 3번 출구 3분</td>
+                        <td>3~4만원</td>
+                        <td>룸 + 코인
+</body>
+</html>

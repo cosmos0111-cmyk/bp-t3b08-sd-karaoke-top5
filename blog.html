@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신도림 가라오케 TOP5 – 형들이 직접 가본 찐 후기</title>
+    <meta name="description" content="신도림에서 진짜 노는 방법? 가라오케 TOP5가 다 안다. 내돈내산 리뷰 & 찐추천. 형들이 인정한 신도림 가라오케 5곳, 지금 바로 확인해보셈.">
+    <meta name="keywords" content="신도림 가라오케, 신도림 노래방, 신도림 가라오케 추천, 신도림 TOP5, 신도림 코인노래방, 신도림 룸카페, 신도림 데이트">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://t3b08-sd-karaoke-top5.vercel.app/">
+    <meta property="og:title" content="신도림 가라오케 TOP5 – 찐형님들의 선택">
+    <meta property="og:description" content="신도림 가라오케 TOP5. 형들이 직접 가보고 꼽은 찐 맛집. 리뷰 보고 오늘 밤 예약각.">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img,
+        svg {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            color: #ff0055;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #ffaa00;
+        }
+        ul,
+        ol {
+            list-style: none;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        section,
+        header,
+        footer {
+            padding: 3rem 0;
+            border-bottom: 2px dashed #333;
+        }
+        .brutal {
+            border: 3px solid #ff0055;
+            padding: 1.5rem;
+            background: #111;
+            box-shadow: 8px 8px 0 #ff0055;
+            transition: transform 0.2s;
+        }
+        .brutal:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0 #ffaa00;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #0a0a0a;
+            border-bottom: 2px solid #ff0055;
+            z-index: 1000;
+            padding: 0.75rem 0;
+        }
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #e0e0e0;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ff0055;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            font-weight: 700;
+            border-radius: 0;
+            transition: background 0.2s;
+        }
+        .tel-link:hover {
+            background: #ffaa00;
+            color: #0a0a0a;
+        }
+        .hero {
+            margin-top: 5rem;
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            text-shadow: 4px 4px 0 #ff0055;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+        .blog-post {
+            padding: 3rem 0;
+        }
+        .blog-post h2 {
+            font-size: 2rem;
+            border-left: 6px solid #ff0055;
+            padding-left: 1rem;
+            margin: 2rem 0 1.5rem;
+        }
+        .blog-post h3 {
+            font-size: 1.4rem;
+            color: #ffaa00;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .blog-post .brutal {
+            margin: 2rem 0;
+        }
+        .blog-post ul {
+            margin-left: 1.5rem;
+            list-style: square;
+            color: #ccc;
+        }
+        .blog-post ul li {
+            margin-bottom: 0.5rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        .faq-item strong {
+            color: #ff0055;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        footer {
+            text-align: center;
+            border-top: 2px dashed #333;
+            color: #777;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #0a0a0a;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem;
+                border-bottom: 2px solid #ff0055;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header class="nav">
+        <div class="container">
+            <a href="/" style="font-weight:800;font-size:1.3rem;">SIN<span style="color:#ff0055;">DO</span>RIM</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="/">홈</a>
+                <a href="/top5">TOP5</a>
+                <a href="/blog">블로그</a>
+                <a href="/about">소개</a>
+                <a href="tel:01012345678" class="tel-link">☎ 전화걸기</a>
+            </nav>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>신도림 가라오케 TOP5<br>형들이 직접 가본 찐 후기</h1>
+            <p>내돈내산으로 다녀온 5곳. 시스템부터 분위기, 꿀팁까지 싹 다 공개한다. 오늘 밤 예약각?</p>
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <h2>왜 신도림 가라오케인가?</h2>
+            <p>형들, 안녕. 나는 신도림에서 3년째 살고 있는데, 주말마다 가라오케 돌아다니는 게 취미야. 처음엔 그냥 친구들이랑 가볍게 갔다가, 어느 순간부터 "여기는 진짜다" 하는 곳들만 골라서 다니게 되더라고. 그래서 오늘은 형들이 인정한 신도림 가라오케 TOP5를 찐으로 소개할게.</p>
+            <p>신도림은 생각보다 가라오케가 많아. 근데 막상 가보면 별로인 곳도 꽤 있더라. 마이크가 고장났다던가, 리모컨이 안 된다던가, 분위기가 너무 칙칙하다던가... 그래서 내가 직접 발로 뛰어서 꼽은 TOP5다. 믿고 봐도 된다.</p>
+
+            <div class="brutal">
+                <h3>📍 1위 – 루나 가라오케</h3>
+                <p><strong>위치:</strong> 신도림역 3번 출구에서 도보 3분</p>
+                <p><strong>가격:</strong> 2시간 기준 3만원 (음료 포함)</p>
+                <p>여기는 진짜 레전드다. 룸이 넓고, 사운드 시스템이 미쳤어. 보컬 효과음도 10가지가 넘는데, 내 목소리가 갑자기 가수가 된 기분이야. 게다가 직원분들이 엄청 친절해서 처음 가는 사람도 부담 없어. 나는 여기서 친구 생일파티 했는데 다들 미친 듯이 놀았어.</p>
+                <ul>
+                    <li>장점: 음질 최고, 룸 청결, 직원 서비스</li>
+                    <li>단점: 주말에는 예약 필수 (인기 많음)</li>
+                </ul>
+            </div>
+
+            <div class="brutal">
+                <h3>📍 2위 – 블랙홀 노래방</h3>
+                <p><strong>위치:</strong> 신도림 테크노마트 인근</p>
+                <p><strong>가격:</strong> 1시간 1만 5천원 (코인식)</p>
+                <p>여기는 코인노래방인데, 일반 코인노래방이랑은 차원이 달라. 방음이 완벽해서 밖에 소리가 하나도 안 새더라고. 그리고 조명 시스템이 예술이야. 무드등, 디스코볼, 레이저까지 있어서 분위기 메이킹 최고. 나는 여기서 여자친구랑 데이트했는데, 서로 노래 부르다가 웃음 바다 됐어.</p>
+                <ul>
+                    <li>장점: 방음 완벽, 조명 시스템, 가성비</li>
+                    <li>단점: 룸이 약간 좁음</li>
+                </ul>
+            </div>
+
+            <div class="brutal">
+                <h3>📍 3위 – 스타라이트 가라오케</h3>
+                <p><strong>위치:</strong> 신도림 중앙로</p>
+                <p><strong>가격:</strong> 2시간 4만원 (안주 포함)</p>
+                <p>여기는 안주가 맛있기로 소문난 곳이야. 노래방에서 안주를 기대하면 안 되는데, 여기는 진짜로 맛있어. 떡볶이랑 치킨이 특히 좋았어. 그리고 직원분들이 노래도 같이 불러주시는데, 실력이 장난 아님. 나는 여기서 혼술하다가 직원분이랑 듀엣으로 '체념' 불렀어. 잊을 수가 없다.</p>
+                <ul>
+                    <li>장점: 안주 퀄리티, 직원 서비스, 분위기</li>
+                    <li>단점: 가격이 조금 비쌈</li>
+                </ul>
+            </div>
+
+            <div class="brutal">
+                <h3>📍 4위 – 보이스 가라오케</h3>
+                <p><strong>위치:</strong> 신도림역 2번 출구 앞</p>
+                <p><strong>가격:</strong> 2시간 2만 5천원 (음료 별도)</p>
+                <p>여기는 가성비 끝판왕이야. 가격이 저렴한데 시설이 나쁘지 않아. 오히려 깔끔한 편이야. 단점은 음질이 조금 떨어지는데, 그래도 가격 생각하면 용서가 됨. 나는 자취방 근처라서 자주 가는데, 혼자 가서 스트레스 풀기 좋아.</p>
+                <ul>
+                    <li>장점: 가격 저렴, 위치 좋음, 깔끔</li>
+                    <li>단점: 음질 보통, 룸 크기 작음</li>
+                </ul>
+            </div>
+
+            <div class="brutal">
+                <h3>📍 5위 – 레드문 노래방</h3>
+                <p><strong>위치:</strong> 신도림 현대백화점 근처</p>
+                <p><strong>가격:</strong> 2시간 3만 5천원 (주류 포함)</p>
+                <p>여기는 주류가 포함된 가격이라서 술 좋아하는 사람한테 딱이야. 맥주랑 소주가 기본으로 나오는데, 양도 넉넉해. 그리고 룸이 아늑해서 친구들이랑 조용히 얘기하면서 놀기 좋아. 나는 여기서 회식했는데, 상사한테 노래도 불러주고 분위기 좋았어.</p>
+                <ul>
+                    <li>장점: 주류 포함, 분위기 좋음, 위치 좋음</li>
+                    <li>단점: 예약 필수, 주말에는 북적임</li>
+                </ul>
+            </div>
+
+            <h2>신도림 가라오케 이용 꿀팁</h2>
+            <p>형들, 내가 몇 년 동안 다니면서 얻은 꿀팁을 알려줄게. 첫째, 주말에는 무조건 예약해. 안 그러면 1시간 넘게 기다려야 할 수도 있어. 둘째, 코인노래방은 시간당 가격이 저렴하니까 단기간 놀 때 좋아. 셋째, 안주가 궁금하면 사전에 전화로 물어봐. 생각보다 안주 별로인 곳도 있더라고.</p>
+
+            <div class="brutal">
+                <h3>자주 묻는 질문 (FAQ)</h3>
+                <div class="faq-item">
+                    <strong>Q1. 신도림 가라오케 TOP5 중에 가장 저렴한 곳은?</strong>
+                    <p>A. 보이스 가라오케가 2시간에 2만 5천원으로 가장 저렴해. 가성비 좋아.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Q2. 혼자 가도 괜찮은 곳?</strong>
+                    <p>A. 당연하지. 보이스 가라오케나 블랙홀 노래방은 혼자 가도 전혀 부담 없어. 직원들도 친절하고.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Q3. 데이트하기 좋은 곳은?</strong>
+                    <p>A. 블랙홀 노래방! 조명 시스템이 로맨틱해서 데이트 분위기 내기 좋아. 루나 가라오케도 괜찮고.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Q4. 주차 가능한 곳?</strong>
+                    <p>A. 루나 가라오케와 스타라이트 가라오케는 주차장이 있어. 나머지는 대중교통 이용하는 게 편해.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Q5. 노래방에서 안주 꼭 시켜야 돼?</strong>
+                    <p>A. 아니, 안주는 선택이야. 하지만 스타라이트 가라오케는 안주가 맛있으니까 한 번쯤 먹어봐.</p>
+                </div>
+            </div>
+
+            <h2>마무리</h2>
+            <p>형들, 오늘 소개한 신도림 가라오케 TOP5 중에 마음에 드는 곳 있나? 나는 개인적으로 루
+</body>
+</html>
