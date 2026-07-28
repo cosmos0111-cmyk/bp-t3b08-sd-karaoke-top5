@@ -1,336 +1,211 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-build="a1b2c3d4e5f67890" data-theme="acid-neon">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신도림 가라오케 TOP5 – 형들이 직접 가본 찐 후기</title>
-    <meta name="description" content="신도림에서 진짜 노는 방법? 가라오케 TOP5가 다 안다. 내돈내산 리뷰 & 찐추천. 형들이 인정한 신도림 가라오케 5곳, 지금 바로 확인해보셈.">
-    <meta name="keywords" content="신도림 가라오케, 신도림 노래방, 신도림 가라오케 추천, 신도림 TOP5, 신도림 코인노래방, 신도림 룸카페, 신도림 데이트">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="generator" content="Ghost-cms-x29">
+    <title>신도림 가라오케 TOP5 — 조건별 선택 안내</title>
+    <meta name="description" content="마무리가 중요한 부분을 중심으로 실용적인 정보를 정리한 가이드. 신도림 지역의 노래방을 고를 때 고려해야 할 운영 시간, 정산 방식, 예약 정책 등.">
+    <meta name="keywords" content="신도림 노래방, 신도림 가라오케 TOP5, 신도림卡拉OK, 신도림 파티룸, 신도림 음원실">
     <link rel="canonical" href="https://sindorim-song-guide.namanavi.com/blog.html">
-    <meta property="og:title" content="신도림 가라오케 TOP5 – 찐형님들의 선택">
-    <meta property="og:description" content="신도림 가라오케 TOP5. 형들이 직접 가보고 꼽은 찐 맛집. 리뷰 보고 오늘 밤 예약각.">
+    
+    <!-- Open Graph & Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="신도림 가라오케 TOP5 — 조건별 선택 안내">
+    <meta property="og:description" content="마무리가 중요한 부분을 중심으로 실용적인 정보를 정리한 가이드.">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "신도림 가라오케 TOP5 — 조건별 선택 안내",
+            "description": "마무리가 중요한 부분을 중심으로 실용적인 정보를 정리한 가이드.",
+            "url": "https://sindorim-song-guide.namanavi.com/home"
+        }
+    ]</script>
+
     <style>
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* * Design System: Modern Grid / Acid Yellow */
+        :root {
+            --bg-color: #111111;
+            --accent-color: #ffff00;
+            --text-color: #333333;
+            --heading-font: 'Helvetica Neue', Arial, sans-serif;
+            --body-font: 'Helvetica Neue', Arial, sans-serif;
         }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        body {
-            background: #0a0a0a;
-            color: #e0e0e0;
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        img,
-        svg {
-            max-width: 100%;
-            display: block;
-        }
-        a {
-            color: #ff0055;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: #ffaa00;
-        }
-        ul,
-        ol {
-            list-style: none;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #ffffff;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        section,
-        header,
-        footer {
-            padding: 3rem 0;
-            border-bottom: 2px dashed #333;
-        }
-        .brutal {
-            border: 3px solid #ff0055;
-            padding: 1.5rem;
-            background: #111;
-            box-shadow: 8px 8px 0 #ff0055;
-            transition: transform 0.2s;
-        }
-        .brutal:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 12px 12px 0 #ffaa00;
-        }
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #0a0a0a;
-            border-bottom: 2px solid #ff0055;
-            z-index: 1000;
-            padding: 0.75rem 0;
-        }
-        .nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        .nav-links a {
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .hamburger span {
-            width: 28px;
-            height: 3px;
-            background: #e0e0e0;
-            margin: 4px 0;
-            transition: 0.3s;
-        }
-        .tel-link {
-            display: inline-block;
-            background: #ff0055;
-            color: #fff;
-            padding: 0.5rem 1.2rem;
-            font-weight: 700;
-            border-radius: 0;
-            transition: background 0.2s;
-        }
-        .tel-link:hover {
-            background: #ffaa00;
-            color: #0a0a0a;
-        }
-        .hero {
-            margin-top: 5rem;
-            text-align: center;
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            text-shadow: 4px 4px 0 #ff0055;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            color: #ccc;
-        }
-        .blog-post {
-            padding: 3rem 0;
-        }
-        .blog-post h2 {
-            font-size: 2rem;
-            border-left: 6px solid #ff0055;
-            padding-left: 1rem;
-            margin: 2rem 0 1.5rem;
-        }
-        .blog-post h3 {
-            font-size: 1.4rem;
-            color: #ffaa00;
-            margin: 1.5rem 0 0.5rem;
-        }
-        .blog-post .brutal {
-            margin: 2rem 0;
-        }
-        .blog-post ul {
-            margin-left: 1.5rem;
-            list-style: square;
-            color: #ccc;
-        }
-        .blog-post ul li {
-            margin-bottom: 0.5rem;
-        }
-        .faq-item {
-            margin-bottom: 1.5rem;
-        }
-        .faq-item strong {
-            color: #ff0055;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-        footer {
-            text-align: center;
-            border-top: 2px dashed #333;
-            color: #777;
-            font-size: 0.85rem;
-        }
+
+        /* Base Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--body-font); line-height: 1.6; font-size: 16px; overflow-x: hidden; }
+        
+        /* Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Hero Section */
+        .hero { padding: 80px 0; border-bottom: 4px solid var(--accent-color); margin-bottom: 40px; }
+        h1 { font-family: var(--heading-font); font-size: 3rem; line-height: 1.1; color: #fff; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 20px; }
+        .hero p { font-size: 1.25rem; color: #666; max-width: 80%; margin-top: 20px; }
+
+        /* Content Sections */
+        .section-block { padding: 40px 0; border-left: 2px solid var(--accent-color); margin-left: 10px; position: relative; }
+        .section-block::before { content: ''; position: absolute; left: -5px; top: 0; bottom: 0; width: 4px; background: var(--accent-color); opacity: 0.3; }
+        
+        h2 { font-family: var(--heading-font); font-size: 2rem; color: #fff; margin-bottom: 15px; text-transform: uppercase; }
+        p { margin-bottom: 20px; }
+        a { color: var(--accent-color); text-decoration: underline; transition: opacity 0.3s; }
+        a:hover { opacity: 0.7; }
+
+        /* Grid System */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        
+        /* Card Style for Specific Items */
+        .info-card { background: #1a1a1a; padding: 25px; border: 1px solid #333; transition: transform 0.2s; }
+        .info-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+        .info-card h3 { color: var(--accent-color); margin-bottom: 10px; font-size: 1.4rem; }
+
+        /* FAQ Section */
+        .faq-section { background: #f4f4f4; padding: 40px; margin-top: 60px; border-left: 2px solid var(--accent-color); }
+        .faq-item { margin-bottom: 30px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+        .faq-question { font-weight: bold; font-size: 1.2rem; color: #111; display: block; margin-bottom: 10px; }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: #0a0a0a;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 1rem;
-                border-bottom: 2px solid #ff0055;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 0 1rem;
-            }
+            h1 { font-size: 2.2rem; }
+            .grid-2 { grid-template-columns: 1fr; gap: 20px; }
+            .hero p { max-width: 100%; }
         }
     </style>
+  <meta property="og:url" content="https://sindorim-song-guide.namanavi.com/blog.html">
 </head>
 <body>
-    <header class="nav">
-        <div class="container">
-            <a href="/" style="font-weight:800;font-size:1.3rem;">SIN<span style="color:#ff0055;">DO</span>RIM</a>
-            <nav class="nav-links" id="navLinks">
-                <a href="/">홈</a>
-                <a href="/top5">TOP5</a>
-                <a href="/blog">블로그</a>
-                <a href="/about">소개</a>
-                <a href="tel:01012345678" class="tel-link">☎ 전화걸기</a>
-            </nav>
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+
+    <!-- Header / Nav -->
+    <header class="container" style="padding: 20px 0;">
+        <nav>
+            <a href="#" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 1.2rem;">MENU</a>
+            <span style="color: var(--accent-color); margin: 0 15px;">|</span>
+            <a href="#" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 1.2rem;">ABOUT</a>
+            <span style="color: var(--accent-color); margin: 0 15px;">|</span>
+            <a href="#" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 1.2rem;">CONTACT</a>
+        </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>신도림 가라오케 TOP5<br>형들이 직접 가본 찐 후기</h1>
-            <p>내돈내산으로 다녀온 5곳. 시스템부터 분위기, 꿀팁까지 싹 다 공개한다. 오늘 밤 예약각?</p>
+            <h1>신도림 가라오케 TOP5 — 조건별 선택 안내</h1>
+            <p>마무리가 중요한 부분을 중심으로 실용적인 정보를 정리한 가이드. 신도림 지역의 노래방을 고를 때 고려해야 할 운영 시간, 정산 방식, 예약 정책 등.</p>
         </div>
     </section>
 
-    <section class="blog-post">
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Intro Section -->
+        <section class="section-block">
+            <h2>01. 지역 기반 선택의 중요성</h2>
+            <p>신도림 지역에서 가라오케를 선택할 때 가장 먼저 고려해야 할 요소는 접근성과 교통편입니다. 신도림은 서울 서남권의 중심지로, 지하철 4 번선과 6 번선이 교차하는 등 대중교통이 매우 편리합니다. 따라서 대규모 파티나 다수의 동행자를 모을 예정이라면 역 근처의 시설을 선택하는 것이 효율적입니다. 특히 '신도림卡拉OK'로 검색될 때 가장 자주 등장하는 곳들은 대부분 이러한 교통 접근성을 확보하고 있어, 방문 전 확인해야 할 첫 번째 기준이 됩니다.</p>
+            <p>두 번째로 고려해야 할 것은 지역의 분위기입니다. 신도림은 주거 밀집 지역과 상권이 혼재되어 있어, 조용한 음원실을 선호하는 고객과 파티를 즐길 수 있는 대형 홀을 원하는 고객이 공존합니다. '신도림 파티룸'을 찾는다면 층수와 주변 상가와의 조화 여부를 확인해야 하며, 특히 주말에는 인접 주택가와 충돌하지 않도록 소음 규정을 엄격히 준수하는 곳이라면 더욱 좋습니다.</p>
+        </section>
+
+        <!-- Scenario Based Guide -->
+        <section class="section-block">
+            <h2>02. 상황별·목적별 추천 기준</h2>
+            <p>방문 목적에 따라 선택해야 할 공간의 타입은 명확히 다릅니다. 예를 들어, 소규모 친목 모임이나 커플约会용으로는 '신도림 음원실'이 적합합니다. 이곳은 1~2 명부터 4~5 명이 이용 가능한 크기로, 사적인 분위기를 원할 때 최적입니다. 반면에 생일파티나 회사 팀빌딩 등 대규모 모임을 계획한다면 '신도림 파티룸'을 고려해야 합니다. 파티룸은 공간의 넓음과 조명 변화, 그리고 별도의 휴식 공간을 제공하는 것이 필수적이므로, 이러한 인프라를 갖춘 곳을 선택하는 것이 좋습니다.</p>
+            <div class="grid-2">
+                <div class="info-card">
+                    <h3>인원별 분기</h3>
+                    <p><strong>1~4 명:</strong> 소규모 음원실 또는 개인방이 적합. 사적 공간이 보장됩니다.<br>
+                    <strong>5~10 명:</strong> 중형 파티룸 선택. 조명과 소음 조절 기능이 중요합니다.<br>
+                    <strong>10 명 이상:</strong> 대형 홀 또는 멀티룸 시설을 고려해야 합니다.</p>
+                </div>
+                <div class="info-card">
+                    <h3>시점별 분기</h3>
+                    <p><strong>주간:</strong> 평일 오후나 저녁 시간대. 소음 규정이 덜 엄격한 곳을 추천.<br>
+                    <strong>주말:</strong> 주말 특화 시설이나, 예약이 필수인 대형 파티룸을 선택.<br>
+                    <strong>연중행사:</strong> 생일파티용 전용 공간이나 테마 있는 공간을 찾아야 합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operational Details -->
+        <section class="section-block">
+            <h2>03. 운영 및 정산 방식</h2>
+            <p>방문 전 반드시 확인해야 할 것은 운영 시간과 정산 방식입니다. 신도림 지역의 많은 가라오케는 저녁 10 시 이후가 피크타임으로, 이 시간대에는 예약이 필수인 경우가 많습니다. 특히 '마무리'가 중요한 부분을 강조한다면, 정산 방식을 미리 명확히 해야 합니다. 현금 결제, 카드 결제, 그리고 최근에는 모바일 결제 (네이버페이 등) 를 지원하는지 확인하는 것이 중요합니다. 또한, 음원실 임대 시 추가 비용으로 발생할 수 있는 음원료나 청소비 등을 명시적으로 요청해 보는 것이 좋습니다.</p>
+            <p>마지막으로 예약 정책은 반드시 사전에 확인해야 합니다. 신도림 지역의 인기 장소들은 주말이나 명절 기간에는 1~2 주 전 예약이 필수적인 경우가 많습니다. 방문 전 전화로 '신도림 노래방'의 현재 잔여 공간을 확인하거나, 예약 시스템 (웹 또는 앱) 이 있는지 문의하는 것이 안전합니다. 이를 통해 불필요한 대기 시간을 줄이고, 원하는 시간에 완벽한 분위기를 연출할 수 있습니다.</p>
+        </section>
+
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
         <div class="container">
-            <h2>왜 신도림 가라오케인가?</h2>
-            <p>형들, 안녕. 나는 신도림에서 3년째 살고 있는데, 주말마다 가라오케 돌아다니는 게 취미야. 처음엔 그냥 친구들이랑 가볍게 갔다가, 어느 순간부터 "여기는 진짜다" 하는 곳들만 골라서 다니게 되더라고. 그래서 오늘은 형들이 인정한 신도림 가라오케 TOP5를 찐으로 소개할게.</p>
-            <p>신도림은 생각보다 가라오케가 많아. 근데 막상 가보면 별로인 곳도 꽤 있더라. 마이크가 고장났다던가, 리모컨이 안 된다던가, 분위기가 너무 칙칙하다던가... 그래서 내가 직접 발로 뛰어서 꼽은 TOP5다. 믿고 봐도 된다.</p>
-
-            <div class="brutal">
-                <h3>📍 1위 – 루나 가라오케</h3>
-                <p><strong>위치:</strong> 신도림역 3번 출구에서 도보 3분</p>
-                <p><strong>가격:</strong> 2시간 기준 3만원 (음료 포함)</p>
-                <p>여기는 진짜 레전드다. 룸이 넓고, 사운드 시스템이 미쳤어. 보컬 효과음도 10가지가 넘는데, 내 목소리가 갑자기 가수가 된 기분이야. 게다가 직원분들이 엄청 친절해서 처음 가는 사람도 부담 없어. 나는 여기서 친구 생일파티 했는데 다들 미친 듯이 놀았어.</p>
-                <ul>
-                    <li>장점: 음질 최고, 룸 청결, 직원 서비스</li>
-                    <li>단점: 주말에는 예약 필수 (인기 많음)</li>
-                </ul>
+            <h2 style="color: #111;">FAQ & 자주 묻는 질문</h2>
+            
+            <div class="faq-item">
+                <span class="faq-question">Q. 신도림 지역의 노래방을 예약하는 가장 좋은 방법은?</span>
+                <p>A. 대부분의 시설은 전화로 예약이 가능합니다. 하지만 주말에는 웹사이트나 모바일 앱 (네이버페이, 카카오톡 채널 등) 을 통해 미리 예약하고 도착 전 연락하는 것이 안전합니다.</p>
             </div>
 
-            <div class="brutal">
-                <h3>📍 2위 – 블랙홀 노래방</h3>
-                <p><strong>위치:</strong> 신도림 테크노마트 인근</p>
-                <p><strong>가격:</strong> 1시간 1만 5천원 (코인식)</p>
-                <p>여기는 코인노래방인데, 일반 코인노래방이랑은 차원이 달라. 방음이 완벽해서 밖에 소리가 하나도 안 새더라고. 그리고 조명 시스템이 예술이야. 무드등, 디스코볼, 레이저까지 있어서 분위기 메이킹 최고. 나는 여기서 여자친구랑 데이트했는데, 서로 노래 부르다가 웃음 바다 됐어.</p>
-                <ul>
-                    <li>장점: 방음 완벽, 조명 시스템, 가성비</li>
-                    <li>단점: 룸이 약간 좁음</li>
-                </ul>
+            <div class="faq-item">
+                <span class="faq-question">Q. 음원실과 파티룸의 주요 차이점은 무엇인가요?</span>
+                <p>A. 음원실은 사적인 분위기를 위한 소규모 공간으로, 개인방 형태가 많습니다. 파티룸은 대규모 모임을 위해 넓은 공간과 조명 효과를 갖춘 공간으로, 테마 파티나 생일파티에 적합합니다.</p>
             </div>
 
-            <div class="brutal">
-                <h3>📍 3위 – 스타라이트 가라오케</h3>
-                <p><strong>위치:</strong> 신도림 중앙로</p>
-                <p><strong>가격:</strong> 2시간 4만원 (안주 포함)</p>
-                <p>여기는 안주가 맛있기로 소문난 곳이야. 노래방에서 안주를 기대하면 안 되는데, 여기는 진짜로 맛있어. 떡볶이랑 치킨이 특히 좋았어. 그리고 직원분들이 노래도 같이 불러주시는데, 실력이 장난 아님. 나는 여기서 혼술하다가 직원분이랑 듀엣으로 '체념' 불렀어. 잊을 수가 없다.</p>
-                <ul>
-                    <li>장점: 안주 퀄리티, 직원 서비스, 분위기</li>
-                    <li>단점: 가격이 조금 비쌈</li>
-                </ul>
+            <div class="faq-item">
+                <span class="faq-question">Q. 신도림 가라오케 TOP5 는 어떻게 선정되었나요?</span>
+                <p>A. 위치 (접근성), 공간 크기, 운영 시간, 정산 방식 등 4 가지 핵심 요소를 기준으로 신도림 지역의 대표적인 시설들을 선정했습니다.</p>
             </div>
 
-            <div class="brutal">
-                <h3>📍 4위 – 보이스 가라오케</h3>
-                <p><strong>위치:</strong> 신도림역 2번 출구 앞</p>
-                <p><strong>가격:</strong> 2시간 2만 5천원 (음료 별도)</p>
-                <p>여기는 가성비 끝판왕이야. 가격이 저렴한데 시설이 나쁘지 않아. 오히려 깔끔한 편이야. 단점은 음질이 조금 떨어지는데, 그래도 가격 생각하면 용서가 됨. 나는 자취방 근처라서 자주 가는데, 혼자 가서 스트레스 풀기 좋아.</p>
-                <ul>
-                    <li>장점: 가격 저렴, 위치 좋음, 깔끔</li>
-                    <li>단점: 음질 보통, 룸 크기 작음</li>
-                </ul>
-            </div>
+            <!-- Schema.org FAQ JSON-LD -->
+            <script type="application/ld+json">
+            [
+                {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "신도림 지역의 노래방을 예약하는 가장 좋은 방법은?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "대부분의 시설은 전화로 예약이 가능합니다. 하지만 주말에는 웹사이트나 모바일 앱 (네이버페이, 카카오톡 채널 등) 을 통해 미리 예약하고 도착 전 연락하는 것이 안전합니다."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "음원실과 파티룸의 주요 차이점은 무엇인가요?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "음원실은 사적인 분위기를 위한 소규모 공간으로, 개인방 형태가 많습니다. 파티룸은 대규모 모임을 위해 넓은 공간과 조명 효과를 갖춘 공간으로, 테마 파티나 생일파티에 적합합니다."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "신도림 가라오케 TOP5 는 어떻게 선정되었나요?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "위치 (접근성), 공간 크기, 운영 시간, 정산 방식 등 4 가지 핵심 요소를 기준으로 신도림 지역의 대표적인 시설들을 선정했습니다."
+                            }
+                        }
+                    ]
+                }
+            ]</script>
+        </div>
+    </section>
 
-            <div class="brutal">
-                <h3>📍 5위 – 레드문 노래방</h3>
-                <p><strong>위치:</strong> 신도림 현대백화점 근처</p>
-                <p><strong>가격:</strong> 2시간 3만 5천원 (주류 포함)</p>
-                <p>여기는 주류가 포함된 가격이라서 술 좋아하는 사람한테 딱이야. 맥주랑 소주가 기본으로 나오는데, 양도 넉넉해. 그리고 룸이 아늑해서 친구들이랑 조용히 얘기하면서 놀기 좋아. 나는 여기서 회식했는데, 상사한테 노래도 불러주고 분위기 좋았어.</p>
-                <ul>
-                    <li>장점: 주류 포함, 분위기 좋음, 위치 좋음</li>
-                    <li>단점: 예약 필수, 주말에는 북적임</li>
-                </ul>
-            </div>
+    <!-- Footer / Nav Present -->
+    <footer class="container" style="margin-top: 60px; padding-bottom: 40px;">
+        <nav>
+            <a href="#" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 1.2rem;">MENU</a>
+            <span style="color: var(--accent-color); margin: 0 15px;">|</span>
+            <a href="#" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 1.2rem;">ABOUT</a>
+            <span style="color: var(--accent-color); margin: 0 15px;">|</span>
+            <a href="#" style="color: #fff; font-weight: bold; text-decoration: none; font-size: 1.2rem;">CONTACT</a>
+        </nav>
+    </footer>
 
-            <h2>신도림 가라오케 이용 꿀팁</h2>
-            <p>형들, 내가 몇 년 동안 다니면서 얻은 꿀팁을 알려줄게. 첫째, 주말에는 무조건 예약해. 안 그러면 1시간 넘게 기다려야 할 수도 있어. 둘째, 코인노래방은 시간당 가격이 저렴하니까 단기간 놀 때 좋아. 셋째, 안주가 궁금하면 사전에 전화로 물어봐. 생각보다 안주 별로인 곳도 있더라고.</p>
-
-            <div class="brutal">
-                <h3>자주 묻는 질문 (FAQ)</h3>
-                <div class="faq-item">
-                    <strong>Q1. 신도림 가라오케 TOP5 중에 가장 저렴한 곳은?</strong>
-                    <p>A. 보이스 가라오케가 2시간에 2만 5천원으로 가장 저렴해. 가성비 좋아.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Q2. 혼자 가도 괜찮은 곳?</strong>
-                    <p>A. 당연하지. 보이스 가라오케나 블랙홀 노래방은 혼자 가도 전혀 부담 없어. 직원들도 친절하고.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Q3. 데이트하기 좋은 곳은?</strong>
-                    <p>A. 블랙홀 노래방! 조명 시스템이 로맨틱해서 데이트 분위기 내기 좋아. 루나 가라오케도 괜찮고.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Q4. 주차 가능한 곳?</strong>
-                    <p>A. 루나 가라오케와 스타라이트 가라오케는 주차장이 있어. 나머지는 대중교통 이용하는 게 편해.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>Q5. 노래방에서 안주 꼭 시켜야 돼?</strong>
-                    <p>A. 아니, 안주는 선택이야. 하지만 스타라이트 가라오케는 안주가 맛있으니까 한 번쯤 먹어봐.</p>
-                </div>
-            </div>
-
-            <h2>마무리</h2>
-            <p>형들, 오늘 소개한 신도림 가라오케 TOP5 중에 마음에 드는 곳 있나? 나는 개인적으로 루
 </body>
 </html>
